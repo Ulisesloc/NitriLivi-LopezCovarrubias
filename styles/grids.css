@@ -126,3 +126,22 @@ footer section {
         "footer footer footer";
     }
 }
+
+.tituloInicio{
+    animation-name: title;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.encabezado-img:hover{
+    width: 11%;
+    height: 11%;
+    transform: perspective(1px);
+}
+
+
+@keyframes title{
+    0% {opacity: 0.2}
+    50% {opacity: 1; color: rgb(0, 0, 0);}
+    100% {opacity: 0.2}
+}
