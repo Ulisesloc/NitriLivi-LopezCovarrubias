@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main section"
+        "footer footer footer";
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-rows: 100px 200px 200px 75px;
+    grid-template-columns: 100px 500px 300px;
+    height: 100vh;
+}
+
+header {
+    background-color:rgb(94, 207, 207);
+    grid-area: header;
+}
+
+.encabezado-img {
+    width: 10%;
+    display: inline-block;
+    margin-left: .2rem;
+    margin-top: .1rem;
+}
+
+.navbar {
+    list-style: none;
+    text-align: right;
+    width: 98%;
+    padding: 5px;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+}
+
+main {
+    grid-area: productos;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.tituloInicio {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1rem;
+    display: inline;
+}
+
+main section p {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.contenedor-texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-img {
+    border-radius: 5px;
+    border: solid rgba(245, 241, 241, 0.801) 6px;
+    align-content: center;
+}
+.texto {
+    display: inline-block;
+    width: 40%;
+}
+
+.main-img {
+    display: inline-block;
+    width: 55%;
+}
+
+.pie-de-pagina {
+    background-color: rgb(94, 207, 207);
+}
+
+footer {
+    height: 2rem;
+}
+
+footer section a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+}
+
+footer section {
+    text-align: right;
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    #grilla{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header header header"
+        "main section"
+        "footer footer footer";
+    }  
+}
+
+@media screen and (min-width: 768px) and(orientation: landscape){
+    #grilla{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "header header header"
+        "main section"
+        "footer footer footer";
+    }
+}
